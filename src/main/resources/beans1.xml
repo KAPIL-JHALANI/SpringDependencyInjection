@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="student" -> (name of the object in ioc container) class="com.example.springdependencyInjection.student" ->(location of class whose bean need to becreated )  >-->
+
+    <!--setter injection-->
+    <!--<bean id="student" class="com.example.springdependencyInjection.student">
+        <property name="name" value="kapil jhalani"></property>
+        &lt;!&ndash;  This is Injecting the depenedency by calling setter method&ndash;&gt;
+    </bean>-->
+
+    <!--Constructor injection-->
+    <bean id="student" class="com.example.springdependencyInjection.student">
+        <constructor-arg name="name" value="kapil jhalani"></constructor-arg>
+        <!--  This is Injecting the depenedency by calling constructor method-->
+    </bean>
+
+</beans>
