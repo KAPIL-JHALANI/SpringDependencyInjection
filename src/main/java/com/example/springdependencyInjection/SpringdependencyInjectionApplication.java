@@ -21,6 +21,16 @@ public class SpringdependencyInjectionApplication {
 
 
 
+		//Object injection without ref in bean
+//		sciencetest test=context.getBean("science", sciencetest.class);
+//		test.cheat();
+
+		//with ref and make different object for scienceCheat so it can be used by several ojects
+		sciencetest test=context.getBean("science1",sciencetest.class);
+		test.cheat();
+
+
+
 
 	}
 

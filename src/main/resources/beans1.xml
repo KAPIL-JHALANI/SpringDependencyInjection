@@ -17,4 +17,26 @@
         <!--  This is Injecting the depenedency by calling constructor method-->
     </bean>
 
+
+
+    <!--Constructor injection-->
+    <bean id="science" class="com.example.springdependencyInjection.sciencetest">
+        <property name="id" value="1000"></property>
+        <property name="scienceCheat">
+            <bean class="com.example.springdependencyInjection.ScienceCheat"></bean>
+        </property>
+        <!--Inner bean for object injection using caaling setter method-->
+        <!--This is a bad practise because if we have many classes using the common class(ScienceCheat) then every time it needs to create a new scienceCheat object-->
+        <!--Instead of that we make a ScieceCheat object and use it as you see below-->
+    </bean>
+
+    <bean id="scienceCheatDemoOject" class="com.example.springdependencyInjection.ScienceCheat"></bean>
+
+    <bean id="science1" class="com.example.springdependencyInjection.sciencetest">
+        <property name="id" value="1000"></property>
+        <property name="scienceCheat" ref="scienceCheatDemoOject"/>
+    </bean>
+
+    <!--<property name="scienceCheat" ref="scienceCheatDemoOject" ->reference to scienceCheatDemoOject obejct in IOC container />-->
+
 </beans>
