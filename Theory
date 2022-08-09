@@ -1,0 +1,4 @@
+How @Autowired works ??
+ans: first it check with autowire="bytype"  if it found then it just inject the object otherwise it go and find object with autowire="byname"
+So when we use byname:  so basically if we have multiple objects of same class in ioc then it fails with bytype and then it cheked with byname
+

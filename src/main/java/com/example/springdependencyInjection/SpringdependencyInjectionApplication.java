@@ -39,6 +39,9 @@ public class SpringdependencyInjectionApplication {
 		Human human=context.getBean("human", Human.class);
 		human.startpump();
 
+		Human human1=context.getBean("human1", Human.class);
+		human1.startpump();
+
 
 
 

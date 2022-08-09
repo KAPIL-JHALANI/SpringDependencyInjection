@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
 
     <!--<bean id="student" -> (name of the object in ioc container) class="com.example.springdependencyInjection.student" ->(location of class whose bean need to becreated )  >-->
 
@@ -61,6 +67,12 @@
     <!-- autowire="byname"   bean name and the object name in human class need to be same   (it create by calling setter method)-->
     <!-- autowire="bytype"   bean object and the object in the human class needs to be of objects of same class    (it create by calling setter method)-->
     <!-- autowire="constructor"   dependency injection by calling the constructor method     (it create by calling constructor method)-->
+
+
+    <!-- calling using autowired annotation-->
+
+    <bean id="heart1" class="com.example.springdependencyInjection.Heart"></bean>
+    <bean id="human1" class="com.example.springdependencyInjection.Human"/>
 
 
 </beans>
