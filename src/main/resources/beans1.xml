@@ -39,4 +39,17 @@
 
     <!--<property name="scienceCheat" ref="scienceCheatDemoOject" ->reference to scienceCheatDemoOject obejct in IOC container />-->
 
+
+
+    <!--Loose coupling using interface and change function using interface and config-->
+    <bean id="mathcheat" class="com.example.springdependencyInjection.MathExamCheat"></bean>
+    <bean id="englishcheat" class="com.example.springdependencyInjection.EnglishExamCheat"></bean>
+
+    <bean id="finaltest" class="com.example.springdependencyInjection.Finaltest">
+        <property name="cheat" ref="englishcheat"/>
+        <!--change the ref according to which exa you want to cheat(english or math)-->
+    </bean>
+
+
+
 </beans>

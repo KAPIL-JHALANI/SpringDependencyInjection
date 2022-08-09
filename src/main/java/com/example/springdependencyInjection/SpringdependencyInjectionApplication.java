@@ -29,6 +29,10 @@ public class SpringdependencyInjectionApplication {
 		sciencetest test=context.getBean("science1",sciencetest.class);
 		test.cheat();
 
+		Finaltest finaltest=context.getBean("finaltest", Finaltest.class);
+		finaltest.startcheat();
+
+
 
 
 
