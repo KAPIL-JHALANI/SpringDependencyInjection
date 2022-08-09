@@ -2,3 +2,14 @@ How @Autowired works ??
 ans: first it check with autowire="bytype"  if it found then it just inject the object otherwise it go and find object with autowire="byname"
 So when we use byname:  so basically if we have multiple objects of same class in ioc then it fails with bytype and then it cheked with byname
 
+why we use @aurowired?
+ans: so that dependency injection handle by spring and we do not need t write code in beans.
+
+** Autowiring is not possible for string ot primite data types. It only used for objects only.
+
+@Qualifie annotaion ??
+ans: used for specifying which beans you want to used if you have multiple objects of same class.
+
+
+** autowire does not need setter method to do deency inject if we directly put @Autowired over the object.
+
