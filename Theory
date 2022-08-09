@@ -13,3 +13,7 @@ ans: used for specifying which beans you want to used if you have multiple objec
 
 ** autowire does not need setter method to do deency inject if we directly put @Autowired over the object.
 
+Value and required use
+@value use for injecting the primitive data literal values
+@Required   making the field required ,  if this value is not inject then object do not created  (this annotation is deprecate after version 5.1 ad you may use constructor injection if you want to use required field)
+

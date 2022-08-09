@@ -7,7 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!-- this context switch on the annoataion-->
     <context:annotation-config/>
+
+    <context:property-placeholder location="classpath:teacher-info.properties"/>
 
     <!--<bean id="student" -> (name of the object in ioc container) class="com.example.springdependencyInjection.student" ->(location of class whose bean need to becreated )  >-->
 
@@ -73,6 +76,10 @@
 
     <bean id="heart1" class="com.example.springdependencyInjection.Heart"></bean>
     <bean id="human1" class="com.example.springdependencyInjection.Human"/>
+
+
+    <bean id="teacher" class="com.example.springdependencyInjection.Teacher">
+    </bean>
 
 
 </beans>
