@@ -52,4 +52,15 @@
 
 
 
+    <!--use of autowire instead by property,  aotowire also use setter injecton-->
+    <bean id="heart" class="com.example.springdependencyInjection.Heart"></bean>
+    <!--<bean id="heart" -> (the id need to be have same name as Object name in Human class when we use autowire="byname")  class="com.example.springdependencyInjection.Heart"></bean>-->
+    <bean id="human" class="com.example.springdependencyInjection.Human" autowire="byName">
+    </bean>
+
+    <!-- autowire="byname"   bean name and the object name in human class need to be same   (it create by calling setter method)-->
+    <!-- autowire="bytype"   bean object and the object in the human class needs to be of objects of same class    (it create by calling setter method)-->
+    <!-- autowire="constructor"   dependency injection by calling the constructor method     (it create by calling constructor method)-->
+
+
 </beans>

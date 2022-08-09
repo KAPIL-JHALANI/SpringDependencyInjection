@@ -33,6 +33,14 @@ public class SpringdependencyInjectionApplication {
 		finaltest.startcheat();
 
 
+		//Create injection using autowire
+		//aotowire also using setter injection
+
+		Human human=context.getBean("human", Human.class);
+		human.startpump();
+
+
+
 
 
 
